@@ -1,0 +1,128 @@
+/* File: login.css */
+
+/* --- THE BLURRED BACKGROUND LAYER --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('cdm-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); 
+    opacity: 0.85; 
+    z-index: -1; 
+}
+
+/* --- SPLIT LAYOUT --- */
+.login-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    z-index: 1;
+}
+
+.split-layout-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    gap: 60px;
+    align-items: center;
+}
+
+/* --- LEFT SIDE: INFO SECTION --- */
+.info-section {
+    flex: 1;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+    animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-header { margin-bottom: 30px; }
+.school-logo-large { height: 90px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)); }
+.welcome-title { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
+.accent-line { width: 60px; height: 4px; background-color: var(--gold-logo); margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.system-description { font-size: 1.1rem; line-height: 1.6; margin-bottom: 35px; max-width: 90%; }
+
+/* --- THE FIXED "LEARN MORE" BUTTON --- */
+.learn-more-btn {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--gold-logo);
+    padding: 10px 25px; 
+    border-radius: 25px; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 35px; 
+    align-self: flex-start; 
+}
+
+.learn-more-btn:hover {
+    background-color: var(--gold-logo);
+    color: var(--navy-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* --- NEW: POWERED BY FOOTER --- */
+.powered-by {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 60px; 
+    opacity: 0.6; 
+    transition: opacity 0.3s ease;
+    cursor: default;
+}
+
+.powered-by:hover { opacity: 1; }
+.powered-text { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.cpe-logo { height: 35px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+
+/* --- RIGHT SIDE: LOGIN CARD --- */
+.login-section { flex: 1; display: flex; justify-content: flex-end; }
+.login-card { background-color: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); width: 100%; max-width: 420px; border-top: 5px solid var(--navy-deep); animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.1s; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.login-card:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4); }
+.card-header { text-align: center; margin-bottom: 30px; }
+.card-header h2 { color: var(--navy-deep); font-size: 2rem; margin-bottom: 8px; }
+.card-header p { font-size: 0.9rem; color: #666; }
+
+/* Form inputs */
+.login-form .form-group { margin-bottom: 20px; }
+.login-form .form-group:last-of-type { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark); font-size: 0.95rem; }
+.form-group input, .form-group select { width: 100%; padding: 12px 15px; border: 1px solid var(--grey-medium); border-radius: 8px; font-size: 1rem; background-color: #fafbfc; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.form-group input:focus, .form-group select:focus { border-color: var(--navy-medium); outline: none; box-shadow: 0 0 0 4px rgba(23, 42, 69, 0.1); background-color: #ffffff; }
+
+/* --- ROLE SELECTOR BUTTONS --- */
+.role-buttons { display: flex; gap: 12px; margin-top: 8px; }
+.role-buttons input[type="radio"] { display: none; }
+.role-btn { flex: 1; text-align: center; padding: 12px 10px; border: 2px solid var(--grey-medium); border-radius: 8px; color: #666; font-size: 0.95rem; font-weight: 600; cursor: pointer; background-color: #fafbfc; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.role-btn:hover { border-color: var(--navy-deep); background-color: var(--gold-logo); color: var(--navy-deep); transform: translateY(-2px); }
+.role-buttons input[type="radio"]:checked + .role-btn { background-color: var(--gold-logo); color: var(--navy-deep); border-color: var(--navy-deep); box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3); transform: translateY(-2px) scale(1.03); }
+.role-btn:active { transform: translateY(1px) scale(0.98) !important; }
+
+/* Login Button */
+.login-btn { background-color: var(--navy-deep); color: var(--white); border: none; padding: 15px; width: 100%; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; margin-top: 0px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.login-btn:hover { background-color: var(--navy-medium); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(10, 25, 47, 0.3); }
+.login-btn:active { transform: translateY(1px); box-shadow: 0 2px 5px rgba(10, 25, 47, 0.3); }
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 850px) {
+    .split-layout-container { flex-direction: column; text-align: center; }
+    .accent-line { margin: 0 auto 25px auto; }
+    .system-description { margin: 0 auto 35px auto; }
+    .login-section { justify-content: center; width: 100%; }
+    .learn-more-btn { align-self: center; margin-bottom: 20px; }
+}

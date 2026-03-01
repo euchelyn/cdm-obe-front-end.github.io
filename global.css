@@ -1,0 +1,74 @@
+/* File: global.css */
+
+/* Color Palette */
+:root {
+    --navy-deep: #0a192f;
+    --navy-medium: #172a45;
+    --gold-logo: #ffd700;
+    --grey-light: #f4f7f6;
+    --grey-medium: #e0e6ed;
+    --text-dark: #333;
+    --text-on-navy: #fff;
+    --white: #fff;
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--navy-deep);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+/* File: global.css */
+
+/* Color Palette */
+:root {
+    --navy-deep: #0a192f;
+    --navy-medium: #172a45;
+    --gold-logo: #ffd700;
+    --grey-light: #f4f7f6;
+    --grey-medium: #e0e6ed;
+    --text-dark: #333;
+    --text-on-navy: #fff;
+    --white: #fff;
+}
+
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--navy-deep);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes smoothFadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
