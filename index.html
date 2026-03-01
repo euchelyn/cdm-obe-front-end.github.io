@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDM-OBE</title>
+    <link rel="icon" type="image/png" href="cdm-logo.png">
+    
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-body">
+
+    <main class="login-wrapper">
+        <div class="split-layout-container">
+            
+<div class="info-section">
+                <div class="brand-header">
+                    <img src="cdm-logo.png" alt="Colegio de Muntinlupa Logo" class="school-logo-large">
+                </div>
+                
+                <h1 class="welcome-title">Welcome to<br>CDM-OBE !</h1>
+                <div class="accent-line"></div>
+                
+                <p class="system-description">
+                    The CDM-OBE is a Centralized Outcome-Based Education Management System designed to track student progress, map course outcomes, and gather vital evaluations from our Alumni and Industry Partners.
+                </p>
+                
+                <button class="learn-more-btn">Learn More</button>
+
+                <div class="powered-by">
+                    <span class="powered-text">Powered by the CDM Pythons</span>
+                    <img src="cpe-logo.png" alt="CpE Logo" class="cpe-logo">
+                </div>
+            </div>
+
+            <div class="login-section">
+                <div class="login-card">
+                    <div class="card-header">
+                        <h2>Log In</h2>
+                        <p>Authorized personnel login only.</p>
+                    </div>
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="username">Email / Student ID</label>
+                            <input type="text" id="username" name="username" placeholder="Enter your ID or Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Log in as:</label>
+                            <div class="role-buttons">
+                                <input type="radio" id="role-pc" name="userRole" value="faculty" required>
+                                <label for="role-pc" class="role-btn">Program Chair</label>
+
+                                <input type="radio" id="role-alumni" name="userRole" value="alumni" required>
+                                <label for="role-alumni" class="role-btn">Alumni</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="login-btn">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
